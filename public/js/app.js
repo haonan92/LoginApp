@@ -1,25 +1,24 @@
 ﻿var app = angular.module("Passport", ["ngRoute"]);
 
 app.config(function($routeProvider) {
-   $routeProvider
-    .when('/home', {
-        templateUrl: 'views/home/home.html'    
+    $routeProvider
+     .when('/home', {
+         templateUrl: 'view/home.html'
      })
     .when('/login', {
-        templateUrl: 'views/login/login.html',
+        templateUrl: 'view/login/login.html',
         controller: 'LoginCtrl'
     })
-    .when('/profile', {
-        templateUrl: 'views/profile/profile.html'       
-    })
-    .when('/registration', {
-        templateUrl: 'views/registration/registration.html'
-    })
     .when('/logout', {
-        templateUrl: 'views/logout/logout.html'
+        templateUrl: 'view/logout/logout.html'
+    })
+    .when('/register', {
+        templateUrl: 'view/register/register.html'
+    })
+    .when('/profile', {
+        templateUrl: 'view/profile/profile.html'
     })
     .otherwise({
         redirectTo: '/home'
     })
 });
-    

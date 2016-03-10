@@ -1,7 +1,7 @@
 {
   "name": "gpower",
   "version": "1.0.0",
-  "description": "",
+  "description": "passportjs",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,6 +10,7 @@
   "author": "Haonan Zhao",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.15.0",
     "express": "^4.13.4",
     "multer": "^1.1.0",
     "passport": "^0.3.2",
