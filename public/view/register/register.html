@@ -5,6 +5,12 @@
 	<meta charset="utf-8" />
 </head>
 <body>
-    <h1>register</h1>
+    <h1>Register</h1>
+    <input ng-model="user.username" /><br />
+    <input ng-model="user.password" /><br />
+    <input ng-model="user.password2" /><br />
+
+    <button ng-click="register(user)">Register</button>
+
 </body>
 </html>

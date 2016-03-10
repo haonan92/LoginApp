@@ -11,17 +11,25 @@
     <script src="js/app.js"></script>
   
     <script src="view/login/login.js"></script>
+    <script src="view/register/register.js"></script>
+    <script src="view/profile/profile.js"></script>
 
 
 </head>
 <body ng-app="Passport">
-    <nav>
+    <nav ng-controller="NavCtrl">
         <a href="#home">Home</a> |
-        <a href="#login">Login</a> |
-        <a href="#logout">Logout</a> |
-        <a href="#register">Register</a> |
-        <a href="#profile">Profile</a>
-    </nav>
+        <span ng-show="!currentUser">
+            <a href="#login">Login</a> |
+            <a href="#register">Register</a>
+        </span>
+        <span ng-show="currentUser">
+            <a href="#profile">Profile</a> |
+            <a href="#logout" ng-click="logout()">Logout</a>
+        </span>
+
+</nav>
+    {{currentUser}}
     <div ng-view>
 
     </div>
