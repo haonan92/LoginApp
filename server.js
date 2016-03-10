@@ -36,8 +36,7 @@ passport.serializeUser(function (user, done) {
 });
 
 passport.deserializeUser(function (user, done) {
-   
-        done(err, user);
+    done(null, user);
 });
 
 
