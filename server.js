@@ -110,11 +110,12 @@ app.get("/rest/user", auth ,function (req, res) {
 });
 //------------------------for registration--------------------
 app.post("/register", function (req, res) {
+    var newUser = req.body;
     UserModel.findOne({ username: req.body.username }, function (err, user)
-    {
-        if (user)
-        {
-            res.json(null);
+    {   
+        if (err) { return next(err); }
+        if (user) {
+            res.json("user already exists");
             return;
         }
         else

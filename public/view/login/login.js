@@ -4,11 +4,13 @@
         console.log(user);
 
         $http.post('/login', user)
-        .success(function (response)
-        {
-           // console.log(response);
+        .success(function (response) {
+            // console.log(response);
             $rootScope.currentUser = response;
             $location.url("/profile");
+        })
+        .error(function (error) {
+            alert("Unauthorized, check your username or password!");
         });
     }
 });
