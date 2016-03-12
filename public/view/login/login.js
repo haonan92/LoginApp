@@ -7,7 +7,7 @@
         .success(function (response) {
             // console.log(response);
             $rootScope.currentUser = response;
-            $location.url("/profile");
+            $location.url("/profile/" + user.username);
         })
         .error(function (error) {
             alert("Unauthorized, check your username or password!");

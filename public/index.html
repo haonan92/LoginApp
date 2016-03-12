@@ -15,7 +15,7 @@
     <script src="view/register/register.js"></script>
     <script src="view/profile/profile.js"></script>
 </head>
-<body ng-app="Passport" style="background-color: black">
+<body ng-app="Passport" style="background-color:black">
     <nav class="navbar navbar-inverse navbar-fixed-top"
           ng-controller="NavCtrl" 
          style="background-color :black">
@@ -33,7 +33,7 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#login" ng-show="!currentUser">Log in</a></li>
+                    <li><a href="#login" ng-show="!currentUser">Log in</a></li> 
                     <li><a href="#register" ng-show="!currentUser">Sign up</a></li>
                     <li><a href="#profile" ng-show="currentUser">Profile</a></li>
                     <li><a href="#logout" ng-show="currentUser" ng-click="logout()">Log out</a></li>
